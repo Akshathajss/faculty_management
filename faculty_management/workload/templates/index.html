@@ -1,0 +1,12 @@
+{% extends "home.html"%}
+{% block content%}
+<div>
+    <h1>Faculty Workload</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock%}
+

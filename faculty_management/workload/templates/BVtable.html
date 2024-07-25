@@ -1,0 +1,120 @@
+{% extends "home.html" %}
+{% block content %}
+<div>
+<h2>normal BVTC</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Casual leave (CL)</th>
+            <th>Restricted leave (RH)</th>
+            <th>Total leave (TL)</th>
+            <th>Remaining leave </th>
+            <th>percentage of leave taken</th>
+            <th>status of leave </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for faculty in result1 %}
+        <tr>
+            <td>{{ faculty.name }}</td>
+            <td>{{ faculty.CL }}</td>
+            <td>{{ faculty.RH }}</td>
+            <td>{{ faculty.TL }}</td>
+            <td>{{ faculty.remaining_TL }}</td>
+            <td>{{ faculty.per }}%</td>
+            <td>{{ faculty.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<div>
+    <h2>robust BVTC</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Casual leave (CL)</th>
+                <th>Restricted leave (RH)</th>
+                <th>Total leave (TL)</th>
+                <th>Remaining leave </th>
+                <th>percentage of leave taken</th>
+                <th>status of leave </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for faculty in result2 %}
+            <tr>
+                <td>{{ faculty.name }}</td>
+                <td>{{ faculty.CL }}</td>
+                <td>{{ faculty.RH }}</td>
+                <td>{{ faculty.TL }}</td>
+                <td>{{ faculty.remaining_TL }}</td>
+                <td>{{ faculty.per }}%</td>
+                <td>{{ faculty.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <div>
+        <h2>worst BVTC</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Casual leave (CL)</th>
+                    <th>Restricted leave (RH)</th>
+                    <th>Total leave (TL)</th>
+                    <th>Remaining leave </th>
+                    <th>percentage of leave taken</th>
+                    <th>status of leave </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for faculty in result3 %}
+                <tr>
+                    <td>{{ faculty.name }}</td>
+                    <td>{{ faculty.CL }}</td>
+                    <td>{{ faculty.RH }}</td>
+                    <td>{{ faculty.TL }}</td>
+                    <td>{{ faculty.remaining_TL }}</td>
+                    <td>{{ faculty.per }}%</td>
+                    <td>{{ faculty.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+
+        <div>
+            <h2>worst robust BVTC</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Casual leave (CL)</th>
+                        <th>Restricted leave (RH)</th>
+                        <th>Total leave (TL)</th>
+                        <th>Remaining leave </th>
+                        <th>percentage of leave taken</th>
+                        <th>status of leave </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for faculty in result4 %}
+                    <tr>
+                        <td>{{ faculty.name }}</td>
+                        <td>{{ faculty.CL }}</td>
+                        <td>{{ faculty.RH }}</td>
+                        <td>{{ faculty.TL }}</td>
+                        <td>{{ faculty.remaining_TL }}</td>
+                        <td>{{ faculty.per }}%</td>
+                        <td>{{ faculty.status }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+{% endblock %}
